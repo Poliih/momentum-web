@@ -14,7 +14,7 @@ export const tagService = {
     await http.delete(`/api/tags/${id}`)
   },
   async weeklyBreakdown() {
-    const { data } = await http.get<TagWeeklyStat[]>('/statistics/tags/weekly')
+    const { data } = await http.get<TagWeeklyStat[]>('/api/statistics/tags/weekly')
     return data
   },
 }
