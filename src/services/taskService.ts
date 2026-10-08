@@ -42,6 +42,6 @@ export const taskService = {
     return data
   },
   async removeItem(taskId: string, itemId: string) {
-    await http.delete(`/tasks/${taskId}/items/${itemId}`)
+    await http.delete(`/api/tasks/${taskId}/items/${itemId}`)
   },
 }
