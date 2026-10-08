@@ -11,11 +11,11 @@ export interface AuthResponse {
 
 export const authService = {
   async register(name: string, email: string, password: string) {
-    const { data } = await http.post<AuthResponse>('/auth/register', { name, email, password })
+    const { data } = await http.post<AuthResponse>('/api/auth/register', { name, email, password })
     return data
   },
   async login(email: string, password: string) {
-    const { data } = await http.post<AuthResponse>('/auth/login', { email, password })
+    const { data } = await http.post<AuthResponse>('/api/auth/login', { email, password })
     return data
   },
   toUser(res: AuthResponse): User {
