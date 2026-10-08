@@ -36,7 +36,7 @@ http.interceptors.response.use(
       isRefreshing = true
       try {
         const { data } = await axios.post(
-          `${http.defaults.baseURL}/auth/refresh`,
+          `${http.defaults.baseURL}/api/auth/refresh`,
           { refreshToken }
         )
         localStorage.setItem('momentum_access_token', data.accessToken)
