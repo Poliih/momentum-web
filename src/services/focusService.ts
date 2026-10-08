@@ -31,7 +31,7 @@ export const focusService = {
     return data
   },
   async historyPaged(page: number, size: number, tagId?: string) {
-    const { data } = await http.get<PageResponse<FocusSession>>('/focus/history/page', {
+    const { data } = await http.get<PageResponse<FocusSession>>('/api/focus/history/page', {
       params: { page, size, tagId },
     })
     return data
